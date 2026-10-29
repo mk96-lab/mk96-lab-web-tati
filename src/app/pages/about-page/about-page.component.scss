@@ -1,0 +1,647 @@
+/* ============================================
+   ESTILOS DE ABOUT PAGE
+   ============================================ */
+
+// Variables de colores
+$color-dark-bg: #0a0e27;
+$color-secondary-bg: #1a1f3a;
+$color-accent-primary: #d4af37;
+$color-accent-secondary: #c9a961;
+$color-burgundy: #591d1f;
+$color-cream: #f5f1e8;
+$color-text-secondary: #b8b3a8;
+$color-border: #3a3f4a;
+
+.about-page {
+  flex: 1;
+  width: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @media (max-width: 1024px) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 15px;
+  }
+}
+
+/* ============================================
+   SECCIÓN HERO
+   ============================================ */
+
+.about-hero {
+  background: linear-gradient(135deg, $color-secondary-bg 0%, $color-dark-bg 100%);
+  padding: 80px 0;
+  border-bottom: 1px solid $color-border;
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 0;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+    color: $color-accent-primary;
+    margin: 0 0 0.5rem 0;
+
+    @media (max-width: 768px) {
+      font-size: 2.2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: $color-text-secondary;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+/* ============================================
+   SECCIÓN DE HISTORIA
+   ============================================ */
+
+.history {
+  padding: 80px 0;
+  background: $color-dark-bg;
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 0;
+  }
+}
+
+.history-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    gap: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.history-text {
+  h3 {
+    font-size: 2.4rem;
+    color: $color-accent-primary;
+    margin: 0 0 1.5rem 0;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    color: $color-text-secondary;
+    line-height: 1.8;
+    margin: 0 0 1.5rem 0;
+
+    @media (max-width: 768px) {
+      font-size: 0.95rem;
+      margin: 0 0 1.2rem 0;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.9rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.history-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+
+  @media (max-width: 768px) {
+    height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    height: 200px;
+  }
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba($color-accent-primary, 0.1) 0%, rgba($color-burgundy, 0.1) 100%);
+  border: 2px solid $color-accent-primary;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-accent-primary;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
+}
+
+/* ============================================
+   SECCIÓN DE VALORES
+   ============================================ */
+
+.values {
+  padding: 80px 0;
+  background: linear-gradient(180deg, $color-dark-bg 0%, $color-secondary-bg 100%);
+  border-top: 1px solid $color-border;
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 0;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: $color-accent-primary;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, $color-accent-primary, $color-accent-secondary);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.value-card {
+  background: linear-gradient(135deg, $color-secondary-bg 0%, rgba($color-burgundy, 0.2) 100%);
+  padding: 2rem;
+  border: 1px solid $color-border;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, $color-accent-primary, $color-accent-secondary);
+  }
+
+  &:hover {
+    border-color: $color-accent-primary;
+    box-shadow: 0 12px 32px rgba($color-accent-primary, 0.15);
+    transform: translateY(-6px);
+  }
+
+  h4 {
+    font-size: 1.3rem;
+    color: $color-cream;
+    margin: 0.5rem 0 0.8rem 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    @media (max-width: 480px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  p {
+    color: $color-text-secondary;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+
+    @media (max-width: 480px) {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.value-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   SECCIÓN DE EQUIPO
+   ============================================ */
+
+.team {
+  padding: 80px 0;
+  background: $color-dark-bg;
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 0;
+  }
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.team-member {
+  background: $color-secondary-bg;
+  border: 1px solid $color-border;
+  border-radius: 2px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &:hover {
+    border-color: $color-accent-primary;
+    box-shadow: 0 16px 40px rgba($color-accent-primary, 0.2);
+    transform: translateY(-8px);
+
+    .member-image {
+      background-color: rgba($color-accent-primary, 0.1);
+    }
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    color: $color-cream;
+    margin: 1.5rem 1rem 0.3rem 1rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 480px) {
+    h4 {
+      font-size: 1.05rem;
+      margin: 1.2rem 0.8rem 0.2rem 0.8rem;
+    }
+  }
+}
+
+.member-image {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, rgba($color-accent-primary, 0.1) 0%, rgba($color-burgundy, 0.1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  .image-placeholder {
+    border: none;
+  }
+
+  @media (max-width: 480px) {
+    height: 180px;
+  }
+}
+
+.member-role {
+  color: $color-accent-primary;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0.3rem 1rem 0.8rem 1rem;
+}
+
+.member-bio {
+  color: $color-text-secondary;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 1rem 1.5rem 1rem;
+
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+    margin: 0 0.8rem 1.2rem 0.8rem;
+  }
+}
+
+/* ============================================
+   SECCIÓN DE CERTIFICACIONES
+   ============================================ */
+
+.certifications {
+  padding: 80px 0;
+  background: linear-gradient(180deg, $color-dark-bg 0%, $color-secondary-bg 100%);
+  border-top: 1px solid $color-border;
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 0;
+  }
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.cert-item {
+  background: rgba($color-accent-primary, 0.05);
+  border: 2px solid $color-accent-primary;
+  border-radius: 2px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &:hover {
+    box-shadow: 0 12px 32px rgba($color-accent-primary, 0.2);
+    transform: translateY(-6px);
+    background: rgba($color-accent-primary, 0.1);
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    color: $color-accent-primary;
+    margin: 0.5rem 0 0.8rem 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    @media (max-width: 480px) {
+      font-size: 1.05rem;
+    }
+  }
+
+  p {
+    color: $color-text-secondary;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+
+    @media (max-width: 480px) {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+.cert-icon {
+  font-size: 2.5rem;
+  color: $color-accent-primary;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   SECCIÓN CTA
+   ============================================ */
+
+.cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, $color-burgundy 0%, $color-dark-bg 100%);
+  border-top: 3px solid $color-accent-primary;
+  border-bottom: 3px solid $color-accent-primary;
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 0;
+  }
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+
+  h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: $color-cream;
+    margin: 0 0 1rem 0;
+    line-height: 1.3;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: $color-text-secondary;
+    margin: 0 0 2rem 0;
+    line-height: 1.7;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      margin: 0 0 1.5rem 0;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.95rem;
+      margin: 0 0 1.2rem 0;
+    }
+  }
+}
+
+.btn-large {
+  padding: 16px 48px;
+  font-size: 1.05rem;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 14px 32px;
+  }
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.value-card,
+.team-member,
+.cert-item {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.value-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.value-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.value-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.value-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.value-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.value-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.team-member:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.team-member:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.team-member:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.team-member:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.cert-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.cert-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.cert-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.cert-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.cert-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.cert-item:nth-child(6) {
+  animation-delay: 0.6s;
+}

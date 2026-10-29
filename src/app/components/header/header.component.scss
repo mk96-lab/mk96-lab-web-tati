@@ -1,0 +1,378 @@
+/* ============================================
+   ESTILOS DEL HEADER - PREMIUM
+   ============================================ */
+
+// Importar variables de colores (se heredan del archivo global)
+$color-dark-bg: #0a0e27;
+$color-secondary-bg: #1a1f3a;
+$color-accent-primary: #d4af37;
+$color-accent-secondary: #c9a961;
+$color-red-wine: #722f37;
+$color-cream: #f5f1e8;
+$color-text-secondary: #b8b3a8;
+$color-border: #3a3f4a;
+
+.header {
+  background: linear-gradient(180deg, rgba($color-dark-bg, 0.98) 0%, rgba($color-secondary-bg, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid $color-border;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+
+  &.scrolled {
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.1), 0 4px 20px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.header-top {
+  padding: 1.2rem 0;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+
+  @media (max-width: 1024px) {
+    padding: 0 30px;
+    gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 15px;
+    gap: 0.5rem;
+  }
+}
+
+/* ============================================
+   MARCA / LOGO
+   ============================================ */
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    gap: 0.8rem;
+    flex-basis: 100%;
+  }
+}
+
+.logo-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, $color-accent-primary, $color-accent-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  box-shadow: 0 4px 12px rgba($color-accent-primary, 0.3);
+  flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $color-dark-bg;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Georgia', serif;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 18px rgba($color-accent-primary, 0.5);
+    transform: scale(1.05);
+  }
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+
+  @media (max-width: 768px) {
+    gap: 0.1rem;
+  }
+
+  .brand-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $color-cream;
+    margin: 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: 'Georgia', serif;
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.95rem;
+    }
+  }
+
+  .brand-subtitle {
+    font-size: 0.75rem;
+    color: $color-accent-primary;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    @media (max-width: 768px) {
+      font-size: 0.65rem;
+    }
+
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+}
+
+/* ============================================
+   NAVEGACIÓN
+   ============================================ */
+
+.navigation {
+  flex: 1;
+
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+  }
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    gap: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.nav-item {
+  position: relative;
+
+  @media (max-width: 768px) {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  @media (max-width: 480px) {
+    flex: 1;
+    min-width: 70px;
+  }
+}
+
+.nav-link {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  color: $color-cream;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  white-space: nowrap;
+
+  @media (max-width: 768px) {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, $color-accent-primary, $color-accent-secondary);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateX(-50%);
+  }
+
+  &:hover {
+    color: $color-accent-primary;
+    text-shadow: 0 0 8px rgba($color-accent-primary, 0.3);
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &:active {
+    color: $color-accent-secondary;
+  }
+
+  &.active {
+    color: $color-accent-primary;
+    text-shadow: 0 0 8px rgba($color-accent-primary, 0.3);
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+/* ============================================
+   ACCIONES / BOTONES
+   ============================================ */
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    gap: 0.3rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      padding: 8px 16px;
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 480px) {
+      padding: 6px 12px;
+      font-size: 0.7rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.15);
+      transition: left 0.3s ease;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      left: 100%;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, $color-accent-primary, $color-accent-secondary);
+    color: $color-dark-bg;
+    border: 2px solid $color-accent-primary;
+    box-shadow: 0 4px 12px rgba($color-accent-primary, 0.25);
+
+    &:hover {
+      background: linear-gradient(135deg, $color-accent-secondary, $color-accent-primary);
+      box-shadow: 0 6px 18px rgba($color-accent-primary, 0.4);
+      border-color: $color-accent-secondary;
+    }
+
+    &:active {
+      box-shadow: 0 2px 6px rgba($color-accent-primary, 0.2);
+    }
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: $color-accent-primary;
+    border: 2px solid $color-accent-primary;
+
+    &:hover {
+      background: $color-accent-primary;
+      color: $color-dark-bg;
+    }
+
+    &:active {
+      background: $color-accent-secondary;
+      border-color: $color-accent-secondary;
+    }
+  }
+}
+
+/* ============================================
+   LÍNEA DECORATIVA
+   ============================================ */
+
+.header-line {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, $color-accent-primary, transparent);
+  width: 100%;
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+
+/* Animaciones deshabilitadas para evitar parpadeo al recargar */
+

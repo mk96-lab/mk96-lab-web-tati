@@ -1,0 +1,523 @@
+/* ============================================
+   ESTILOS GLOBALES - WEB DE TATI
+   Diseño Premium para Exportación de Carnes
+   ============================================ */
+
+/* ============================================
+   PALETA DE COLORES PREMIUM
+   ============================================ */
+
+// Colores principales
+$color-dark-bg: #0a0e27;      // Negro azulado profundo
+$color-secondary-bg: #1a1f3a; // Gris oscuro azulado
+$color-accent-primary: #d4af37;    // Dorado premium
+$color-accent-secondary: #c9a961;  // Dorado más oscuro
+$color-accent-copper: #b8860b;     // Cobre dorado
+$color-red-wine: #722f37;     // Vino tinto profundo
+$color-burgundy: #591d1f;     // Burgundy oscuro
+$color-cream: #f5f1e8;        // Crema cálida
+$color-light-gray: #e8e4d9;   // Gris claro neutro
+$color-text-primary: #e8e4d9; // Texto principal
+$color-text-secondary: #b8b3a8; // Texto secundario
+$color-border: #3a3f4a;       // Bordes sutiles
+
+/* ============================================
+   RESET Y CONFIGURACIÓN GENERAL
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Trebuchet MS, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $color-text-primary;
+  background-color: $color-dark-bg;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(114, 47, 55, 0.02) 0%, transparent 50%);
+  overflow-x: hidden;
+  letter-spacing: 0.3px;
+}
+
+/* ============================================
+   TIPOGRAFÍA Y TÍTULOS
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: $color-cream;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-family: 'Georgia', 'Garamond', serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: $color-accent-primary;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 2.2rem;
+  letter-spacing: 0.8px;
+  border-bottom: 2px solid $color-accent-primary;
+  padding-bottom: 0.8rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+}
+
+h3 {
+  font-size: 1.8rem;
+  color: $color-accent-primary;
+  
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
+}
+
+h4 {
+  font-size: 1.4rem;
+  color: $color-light-gray;
+  font-weight: 600;
+}
+
+p {
+  color: $color-text-secondary;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+/* ============================================
+   ENLACES
+   ============================================ */
+
+a {
+  color: $color-accent-primary;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+
+  &:hover {
+    color: $color-accent-secondary;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+  }
+
+  &:active {
+    color: $color-accent-copper;
+  }
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: none;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    left: 100%;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(212, 175, 55, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  padding: 12px 32px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &-primary {
+    background: linear-gradient(135deg, $color-accent-primary, $color-accent-secondary);
+    color: $color-dark-bg;
+    border: 2px solid $color-accent-primary;
+
+    &:hover {
+      background: linear-gradient(135deg, $color-accent-secondary, $color-accent-copper);
+      border-color: $color-accent-secondary;
+    }
+  }
+
+  &-secondary {
+    background: transparent;
+    color: $color-accent-primary;
+    border: 2px solid $color-accent-primary;
+
+    &:hover {
+      background: $color-accent-primary;
+      color: $color-dark-bg;
+    }
+  }
+
+  &-outline {
+    background: transparent;
+    color: $color-cream;
+    border: 2px solid $color-cream;
+
+    &:hover {
+      background: $color-cream;
+      color: $color-dark-bg;
+    }
+  }
+}
+
+/* ============================================
+   CONTENEDORES
+   ============================================ */
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @media (max-width: 1024px) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 15px;
+  }
+}
+
+/* ============================================
+   SECCIONES
+   ============================================ */
+
+section {
+  padding: 80px 0;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding: 50px 0;
+  }
+
+  &.dark {
+    background-color: $color-dark-bg;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.02) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(114, 47, 55, 0.01) 0%, transparent 50%);
+  }
+
+  &.premium {
+    background: linear-gradient(135deg, $color-secondary-bg 0%, rgba(212, 175, 55, 0.05) 100%);
+  }
+
+  &.accent {
+    background: linear-gradient(180deg, $color-burgundy, $color-dark-bg);
+    border-top: 3px solid $color-accent-primary;
+    border-bottom: 3px solid $color-accent-primary;
+  }
+}
+
+/* ============================================
+   TARJETAS Y ELEMENTOS
+   ============================================ */
+
+.card {
+  background: $color-secondary-bg;
+  border: 1px solid $color-border;
+  border-radius: 2px;
+  padding: 2rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, $color-accent-primary, $color-accent-secondary);
+  }
+
+  &:hover {
+    border-color: $color-accent-primary;
+    box-shadow: 0 12px 24px rgba(212, 175, 55, 0.15), inset 0 1px 0 rgba(212, 175, 55, 0.1);
+    transform: translateY(-4px);
+  }
+}
+
+/* ============================================
+   LÍNEAS DECORATIVAS
+   ============================================ */
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, $color-accent-primary, transparent);
+  margin: 2rem 0;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, $color-accent-primary, $color-accent-secondary);
+  margin: 1.5rem 0;
+}
+
+.divider-vertical {
+  width: 1px;
+  height: 60px;
+  background: $color-accent-primary;
+}
+
+/* ============================================
+   INPUTS Y FORMULARIOS
+   ============================================ */
+
+input,
+textarea,
+select {
+  background: $color-secondary-bg;
+  color: $color-text-primary;
+  border: 1px solid $color-border;
+  padding: 12px 16px;
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 0;
+  transition: all 0.3s ease;
+
+  &::placeholder {
+    color: $color-text-secondary;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-accent-primary;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    background: $color-dark-bg;
+  }
+}
+
+/* ============================================
+   SCROLLBAR PERSONALIZADA
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-secondary-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-accent-primary;
+  border-radius: 5px;
+
+  &:hover {
+    background: $color-accent-secondary;
+  }
+}
+
+/* ============================================
+   UTILIDADES
+   ============================================ */
+
+.text-gold {
+  color: $color-accent-primary;
+}
+
+.text-light {
+  color: $color-cream;
+}
+
+.text-muted {
+  color: $color-text-secondary;
+}
+
+.mt-large {
+  margin-top: 4rem;
+}
+
+.mb-large {
+  margin-bottom: 4rem;
+}
+
+.highlight {
+  position: relative;
+  padding: 0 4px;
+  background: linear-gradient(120deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.2));
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  section {
+    padding: 30px 0;
+  }
+}
+
+/* ============================================
+   ACCESIBILIDAD
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

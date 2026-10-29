@@ -1,0 +1,78 @@
+/* ============================================
+   ESTILOS DE PRODUCTS PAGE
+   ============================================ */
+
+// Variables de colores
+$color-dark-bg: #0a0e27;
+$color-secondary-bg: #1a1f3a;
+$color-accent-primary: #d4af37;
+$color-accent-secondary: #c9a961;
+$color-text-secondary: #b8b3a8;
+$color-cream: #f5f1e8;
+$color-border: #3a3f4a;
+
+.products-page {
+  flex: 1;
+  width: 100%;
+}
+
+.products-hero {
+  background: linear-gradient(135deg, $color-secondary-bg 0%, $color-dark-bg 100%);
+  padding: 60px 0;
+  border-bottom: 1px solid $color-border;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 30px 0;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+
+    @media (max-width: 1024px) {
+      padding: 0 30px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0 20px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 0 15px;
+    }
+  }
+
+  h2 {
+    font-size: 2.8rem;
+    color: $color-accent-primary;
+    margin: 0 0 0.5rem 0;
+
+    @media (max-width: 768px) {
+      font-size: 2.2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: $color-text-secondary;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.95rem;
+    }
+  }
+}
